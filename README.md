@@ -1,5 +1,7 @@
 # RSSHub on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/rsshub-3?utm_medium=integration&utm_source=button&utm_campaign=rsshub)
+
 A Railway template for [RSSHub](https://github.com/DIYgod/RSSHub), the open-source RSS feed generator for thousands of websites and social networks.
 
 ## What it deploys
