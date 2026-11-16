@@ -1,0 +1,17 @@
+# Local test only: mirrors the Railway template (RSSHub + Redis with a volume).
+services:
+  rsshub:
+    build: .
+    environment:
+      PORT: "1200"
+      REDIS_URL: "redis://default:localtest@redis:6379?family=0"
+    ports:
+      - "1200"
+    depends_on: [redis]
+  redis:
+    image: redis:8.2.1
+    command: ["redis-server", "--requirepass", "localtest", "--save", "60", "1", "--dir", "/data"]
+    volumes:
+      - redis-data:/data
+volumes:
+  redis-data:
